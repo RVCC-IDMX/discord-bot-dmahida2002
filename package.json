@@ -1,0 +1,20 @@
+{
+  "name": "discord-bot-dmahida2002",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RVCC-IDMX/discord-bot-dmahida2002.git"
+  },
+  "keywords": [],
+  "author": "Deeshan Mahidas <G00295008@stu.raritanval.edu> (https://github.com/dmahida2002)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RVCC-IDMX/discord-bot-dmahida2002/issues"
+  },
+  "homepage": "https://github.com/RVCC-IDMX/discord-bot-dmahida2002#readme"
+}
