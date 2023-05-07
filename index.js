@@ -1,6 +1,6 @@
 // Require the necessary discord.js classes
 const {
-  Client, Collection, Events, GatewayIntentBits,
+  Client, Collection, Events, GatewayIntentBits, EmbedBuilder,
 } = require('discord.js');
 
 const fs = require('node:fs');
@@ -52,6 +52,22 @@ client.on(Events.InteractionCreate, async (interaction) => {
     } else {
       await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
     }
+  }
+});
+
+client.on('interactionCreate', async (interaction) => {
+  if (!interaction.isButton()) return;
+  if (interaction.customId === 'danger') {
+    const dangerEmbed = new EmbedBuilder()
+      .setColor(0x0099FF)
+      .setTitle('THE CONSEQUENCES OF CLICKING ME!!')
+      .setAuthor({ name: 'Kalkulus II', iconURL: 'https://sd.keepcalms.com/i/keep-calm-and-love-kalkulus-ii.png' })
+      .setDescription('NOW! Solve 100 integrals.')
+      .setImage('https://media.cheggcdn.com/media/867/8674e29f-0cc9-4a37-b7aa-d79ae21a511e/phpN2ihNr.png')
+      .setTimestamp()
+      .setFooter({ text: 'YOU MUST PASS ALL INTEGRALS!', iconURL: 'https://sd.keepcalms.com/i/keep-calm-and-love-kalkulus-ii.png' });
+    await interaction.channel.send({ embeds: [dangerEmbed] });
+    await interaction.update({ content: 'Kalk II', components: [] });
   }
 });
 
