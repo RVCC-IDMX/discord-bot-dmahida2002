@@ -19,11 +19,14 @@
   "homepage": "https://github.com/RVCC-IDMX/discord-bot-dmahida2002#readme",
   "devDependencies": {
     "@eslint/create-config": "^0.4.3",
+    "@types/regenerator-runtime": "^0.13.1",
     "eslint": "^8.39.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5"
   },
   "dependencies": {
-    "discord.js": "^14.10.2"
+    "discord.js": "^14.10.2",
+    "dotenv": "^16.0.3",
+    "regenerator-runtime": "^0.13.11"
   }
 }
